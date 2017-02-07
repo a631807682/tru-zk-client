@@ -64,7 +64,7 @@ module.exports = function({ zookeeperAddress, zkNodeName, port }, loggerPath) {
                 if (result.index != lastSlashIndex) {
                     nodeMode = CreateMode.PERSISTENT;
                 } else {
-                    nodeMode = CreateMode.EPHEMERAL;
+                    nodeMode = CreateMode.EPHEMERAL_SEQUENTIAL;
                     nodeData = new Buffer(JSON.stringify(data));
                 }
 
